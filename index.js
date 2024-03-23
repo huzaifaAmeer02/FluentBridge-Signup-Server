@@ -8,7 +8,7 @@
 * jsonwebtoken (npm i jsonwebtoken)
 * npm install cors
 * npm install nodemailer
-*
+* npm install multer
 * to run -> nodemon
 
 
