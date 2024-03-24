@@ -52,7 +52,8 @@ app.get('/getQuestions', (req, res)=>{
 })
 
 const connectDb = async ()=>{
-    return await mongoose.connect('mongodb+srv://huzaifa20221354:gA0jLfuPllOCPayx@fluentdb.nifi4cd.mongodb.net/?retryWrites=true&w=majority&appName=fluentbridgeDB');
+    const current_url=process.env.ENV==="dev"? 'mongodb://127.0.0.1:27017/fluentBridge':'mongodb+srv://huzaifa20221354:gA0jLfuPllOCPayx@fluentdb.nifi4cd.mongodb.net/fluentbridgeDB?retryWrites=true&w=majority&appName=fluentbridgeDB';
+    return await mongoose.connect(current_url);
 
 }
 try{
